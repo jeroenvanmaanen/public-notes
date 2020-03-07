@@ -1,2 +1,3 @@
 # public-notes
-Public notes
+
+[Future topics](future-topics/)
