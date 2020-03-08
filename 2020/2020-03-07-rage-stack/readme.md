@@ -1,6 +1,8 @@
 # The (Spanish) RAGE stack
 
-In general I am not very fond of abbreviations. I typically work in large organisations than tend to make up tons of stuff as they go along. Every half-baked idea is summarized in an acronym or TLA (three-letter abbreviation) to help the people involved to align their actions with the local context. After a while the cluster of self-invented terms also provides the people involved with a warm, fuzzy feeling of belonging to the in-crowd.
+> Management summary: big software systems are complex, and they need to evolve. RAGE is a technology stack that keeps the complexity in plain view rather than hide it. RAGE is based on design choices that favor the long-term view.
+
+In general I am not very fond of abbreviations. I typically work in large organisations than tend to make up tons of stuff as they go along. Every half-baked idea is summarized in an acronym or TLA (three-letter abbreviation) to help team members to align their actions with the local context. After a while the cluster of self-invented terms also provides the people involved with a warm, fuzzy feeling of belonging to the in-crowd.
 
 The useful function an acronym _can_ provide, however, is the function that a lighthouse has too: a beacon. Then the acronym helps new people to get their bearings. "Ah, so we're using MEAN, so this is an all JavaScript universe!".
 
@@ -25,8 +27,20 @@ Why? Well, for a number of reasons:
 * AxonServer provides an elegant API for routing commands, events, and queries as well as for persisting events.
 * Envoy (possibly extended with a proper service mesh control plane like Istio) provides an off the shelf component that can be used to manage the complexities of interacting micro-services.
 * All the building blocks can use gRPC to communicate. gRPC provides efficiency, streaming, and schema evolution.
-* The payload of the messages exchanged with AxonServer can be encoded with protobuf. This provides schema evolution is interoperable with gRPC. Using the same technology for encoding messages as for communicating with external components reduces complexity.
+* The payload of the messages exchanged with AxonServer can be encoded using Protocol Buffers. This provides schema evolution is interoperable with gRPC. Using the same technology for encoding messages as for communicating with external components reduces complexity.
 
 Let's be clear about one thing, however: in the RAGE framework, complexity will not be hidden like a boggart in a cupboard, ready to rain fear, uncertainty and doubt on innocent newcomers and weary veterans alike.
 
-Are we there yet? No. I am working on an [archetypal example](https://github.com/jeroenvanmaanen/archetype-go-axon).
+Are we there yet? No. I am working on an [archetypal example](https://github.com/jeroenvanmaanen/archetype-go-axon). One of the benefits of using off-the-shelf components for everything except the presentation layer and the business logic is that you can use the example project to start a very small application based on the RAGE stack. when the system stays small, RAGE is not in the way. When the systems needs to grow or integrate with other systems, using RAGE provides natural ways to evolve to the next level.
+
+## Links
+
+* [React](https://reactjs.org/): A JavaScript library for building user interfaces
+* [AxonServer](https://axoniq.io/product-overview/axon-server): Zero-configuration message router and event store for Axon
+* [Go](https://golang.org/) is an open source programming language that makes it easy to build simple, reliable, and efficient software
+* [Envoy](https://www.envoyproxy.io/) is an open source edge and service proxy, designed for cloud-native applications
+* [Istio](https://istio.io/): Connect, secure, control, and observe services
+* [Elastic Search](https://www.elastic.co/): Search and analyze your data in real time
+* [Protocol Buffers](https://developers.google.com/protocol-buffers) are a language-neutral, platform-neutral extensible mechanism for serializing structured data
+* [Nix](https://nixos.org/nixos/nix-pills/) is a purely functional package manager and deployment system for POSIX
+* [Why You Should Be Focused On Simplicity Not More Features And Complexity.](https://www.carlpullein.com/blog/why-you-should-be-focused-on-simplicity-not-more-features-and-complexity/12/9/2018)
