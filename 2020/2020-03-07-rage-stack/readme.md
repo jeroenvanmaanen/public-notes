@@ -45,4 +45,3 @@ Are we there yet? No. I am working on an [archetypal example](https://github.com
 * [Elastic Search](https://www.elastic.co/): Search and analyze your data in real time
 * [Protocol Buffers](https://developers.google.com/protocol-buffers) are a language-neutral, platform-neutral extensible mechanism for serializing structured data
 * [Nix](https://nixos.org/nixos/nix-pills/) is a purely functional package manager and deployment system for POSIX
-* [Why You Should Be Focused On Simplicity Not More Features And Complexity.](https://www.carlpullein.com/blog/why-you-should-be-focused-on-simplicity-not-more-features-and-complexity/12/9/2018)
