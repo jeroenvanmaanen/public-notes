@@ -24,7 +24,9 @@ Why? Well, for a number of reasons:
 * Business-logic components should not comprise hidden complexity.
 * Event sourcing allows for better schema evolution than SQL.
 * Complexity should be plainly visible, but clearly separated from custom-made components.
+* React is a user interface library with a huge market-share because of [reasons](https://medium.com/@TechMagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d). In my opinion, the fact that React does **not** provide two-way data binding between model and view is an advantage, not a lack of functionality. The commitment to one-way data binding keeps fundamental complexity of user interfaces in plain view.
 * AxonServer provides an elegant API for routing commands, events, and queries as well as for persisting events.
+* Go is a type-safe programming language that compiles to machine code. Executables created using Go perform extremely well en start up very fast. I confess that I first considered using Haskell (you HEAR?), because I think functional programming shows tremendous promise, but I was disenchanted by the lack of mature libraries for _e.g._, gRPC. It is also much easier to find experienced Go coders.
 * Envoy (possibly extended with a proper service mesh control plane like Istio) provides an off the shelf component that can be used to manage the complexities of interacting micro-services.
 * All the building blocks can use gRPC to communicate. gRPC provides efficiency, streaming, and schema evolution.
 * The payload of the messages exchanged with AxonServer can be encoded using Protocol Buffers. This provides schema evolution is interoperable with gRPC. Using the same technology for encoding messages as for communicating with external components reduces complexity.
