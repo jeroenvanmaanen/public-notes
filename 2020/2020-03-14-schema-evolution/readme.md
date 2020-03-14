@@ -9,7 +9,7 @@ Traditionally, database have been structured around an SQL schema. When done rig
 * The necessity to change the structure of large volumes of stored data.
 * New technologies make specific queries feasible (_e.g._, Elastic Search, GraphQL)
 * Marshalling and data transfer is often more important that efficient storage.
-* Queries on normalized data takes much more time than retrieval from a document database, search index, or tuple store.
+* Queries on normalized data take much more time than retrieval from a document database, search index, or tuple store.
 
 ## NoSQL
 
