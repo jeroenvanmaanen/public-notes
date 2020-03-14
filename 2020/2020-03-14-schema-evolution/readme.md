@@ -23,7 +23,7 @@ There is a better way. Model the _events_ in a domain instead of modeling the en
 
 ### Commands
 
-In CQRS, for each update to the date, a command has to be sent to the system. Each command is checked against a projection of all past events to verify that the command is valid in the current state. (To make these projections efficient it is a good idea to use Domain Driven Design (DDD) to choose appropriate [aggregate](https://martinfowler.com/bliki/DDD_Aggregate.html) boundaries.) If a command is valid, the associated event(s) are added to the Event Store. This guarantees the transactionality of the system.
+In CQRS, for each update to the date, a command has to be sent to the system. Each command is checked against a projection of all past events to verify that the command is valid in the current state. (To make these projections efficient it is a good idea to use [Domain Driven Design](https://dddcommunity.org/) (DDD) to choose appropriate [aggregate](https://martinfowler.com/bliki/DDD_Aggregate.html) boundaries.) If a command is valid, the associated event(s) are added to the Event Store. This guarantees the transactionality of the system.
 
 ### Queries
 
